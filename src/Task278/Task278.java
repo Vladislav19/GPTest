@@ -24,7 +24,6 @@ public class Task278 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private ArrayList<String> readFile(){
@@ -75,17 +74,17 @@ public class Task278 {
     }
 
     private int searchElem(int indexStart, char elem, char[] mas){
-        int i;
+        int z;
         if(indexStart==0){
             indexStart=0;
         }
         else indexStart=indexStart+1;
-        for ( i=indexStart;i<mas.length;i++){
-            if (mas[i]==elem){
-                return i;
+        for ( z=indexStart;z<mas.length;z++){
+            if (mas[z]==elem){
+                return z;
             }
         }
-        return i;
+        return z;
     }
 
     private void writeFile(String answer) throws IOException {
