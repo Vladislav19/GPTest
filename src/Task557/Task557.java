@@ -20,7 +20,7 @@ public class Task557 {
         int[][] mas = task557.doMathPart(masMas,infoAboutMas);
         System.out.println(mas[0][1]);
         FileWriter nFile = new FileWriter("D:\\Projects\\GPTest\\src\\Task557\\output.txt");
-        nFile.write(mas[0][1]+"");
+        nFile.write(mas[infoAboutMas[2]-1][infoAboutMas[3]-1]+"");
         nFile.close();
     }
 
@@ -56,7 +56,7 @@ public class Task557 {
         int [][] massive = new int[mas[1]][mas[1]];
         ArrayList<int[][]> masMas =new ArrayList<>();
         int indexFirstMassiveStr = 4;
-        int indexLastString = indexFirstMassiveStr+(2*mas[0]+1);
+        int indexLastString = indexFirstMassiveStr+(mas[1]*mas[0]+1);
         int kolvoMas = mas[0];
         int razmerMas = mas[1];
         int j=0,i=0,k=0;
@@ -97,7 +97,7 @@ public class Task557 {
         int[][] startMas = mas.get(0);
         for(int i=1;i<mas.size();i++){
             int[][] secondMas = mas.get(i);
-            startMas=matrYmnosh(startMas,secondMas,info[1]);
+            startMas=matrYmnosh(startMas,secondMas,info[1],info[4]);
         }
 
 
@@ -105,7 +105,7 @@ public class Task557 {
 
     }
 
-    private int[][] matrYmnosh(int[][] first,int[][] second, int size){
+    private int[][] matrYmnosh(int[][] first,int[][] second, int size,int el){
         int c[][] = new int[size][size];
         for(int i=0;i<size;i++){
             for(int j=0;j<size;j++){
@@ -113,8 +113,8 @@ public class Task557 {
                 for(int k=0;k<size;k++){
                     c[i][j]+=first[i][k]*second[k][j];
                 }
-                if(c[i][j]>=239){
-                    c[i][j]=c[i][j]%239;
+                if(c[i][j]>=el){
+                    c[i][j]=c[i][j]%el;
                 }
             }
         }
