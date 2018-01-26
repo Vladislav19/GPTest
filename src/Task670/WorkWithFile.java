@@ -32,7 +32,7 @@ public class WorkWithFile {
         int[] mas = new int[n];
         int k=1;
         String s;
-        int eden,dec,sot,tisac;
+        int eden,dec,sot,tisac,decTis;
         for (int i=1;i<mas.length;i++){
             if(i<=10){
                 mas[i-k]=i;
@@ -63,6 +63,18 @@ public class WorkWithFile {
                 sot=s.charAt(s.length()-3);
                 tisac=s.charAt(s.length()-4);
                 if(eden!=dec & eden!=sot & dec!=sot & eden!=tisac & dec!=tisac & sot!=tisac){
+                    mas[i-k]=i;
+                }
+                else k++;
+            }
+            else if(i<100000){
+                s=""+i;
+                eden=s.charAt(s.length()-1);
+                dec=s.charAt(s.length()-2);
+                sot=s.charAt(s.length()-3);
+                tisac=s.charAt(s.length()-4);
+                decTis=s.charAt(s.length()-5);
+                if(eden!=dec & eden!=sot & dec!=sot & eden!=tisac & dec!=tisac & sot!=tisac & decTis!=eden & decTis!=dec & decTis!=sot & decTis!=tisac){
                     mas[i-k]=i;
                 }
                 else k++;
