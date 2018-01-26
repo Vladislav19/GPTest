@@ -53,10 +53,10 @@ public class Task557 {
         int [][] massive = new int[mas[1]][mas[1]];
         ArrayList<int[][]> masMas =new ArrayList<>();
         int indexFirstMassiveStr = 4;
-        int indexLastString = indexFirstMassiveStr+(mas[1]*mas[0]+1);
+        int indexLastString = indexFirstMassiveStr+(mas[0]*(mas[1]+1)-1);
         int kolvoMas = mas[0];
         int razmerMas = mas[1];
-        int j=0,i=0,k=0;
+        int j=0,i;
         ArrayList<String> masLine = new ArrayList<>(razmerMas);
         while( j<kolvoMas){
             i=0;
