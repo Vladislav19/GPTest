@@ -30,7 +30,7 @@ public class Task278 {
         ArrayList<String> strings = new ArrayList<>();
 
         try {
-            FileReader reader = new FileReader("D:\\Projects\\GPTest\\src\\Task278\\input.txt");
+            FileReader reader = new FileReader(System.getProperty("user.dir")+"/src/Task278/input.txt");
             Scanner scanner = new Scanner(reader);
             while(scanner.hasNextLine()) {
                 strings.add(scanner.nextLine());
@@ -88,7 +88,7 @@ public class Task278 {
     }
 
     private void writeFile(String answer) throws IOException {
-        FileWriter nFile = new FileWriter("D:\\Projects\\GPTest\\src\\Task278\\output.txt");
+        FileWriter nFile = new FileWriter(System.getProperty("user.dir")+"/src/Task278/output.txt");
         nFile.write(answer);
         nFile.close();
     }

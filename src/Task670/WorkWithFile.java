@@ -72,7 +72,7 @@ public class WorkWithFile {
     }
 
     public void  writeFile(int n) throws IOException {
-        FileWriter nFile = new FileWriter("D:\\Projects\\GPTest\\src\\Task670\\output.txt");
+        FileWriter nFile = new FileWriter(System.getProperty("user.dir")+"/src/Task670/output.txt");
         nFile.write(n+"");
         nFile.close();
     }

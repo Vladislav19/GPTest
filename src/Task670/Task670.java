@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Task670 {
     public static void main(String[] args) throws IOException {
         WorkWithFile workWithFile = new WorkWithFile();
-        int n = workWithFile.readFile("D:\\Projects\\GPTest\\src\\Task670\\input.txt");
+        int n = workWithFile.readFile(System.getProperty("user.dir")+"/src/Task670/input.txt");
         int mas[] = workWithFile.createAntonNewMas(9999);
         workWithFile.writeFile(mas[n-1]);
 

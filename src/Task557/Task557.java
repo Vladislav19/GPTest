@@ -16,19 +16,16 @@ public class Task557 {
         ArrayList<String> strings= task557.readFile();
         int[] infoAboutMas = task557.parseInfo(strings);
         ArrayList<int[][]> masMas = task557.parseMas(strings,infoAboutMas);
-        System.out.println(masMas.size());
         int[][] mas = task557.doMathPart(masMas,infoAboutMas);
-        System.out.println(mas[0][1]);
-        FileWriter nFile = new FileWriter("D:\\Projects\\GPTest\\src\\Task557\\output.txt");
+        FileWriter nFile = new FileWriter(System.getProperty("user.dir")+"/src/Task557/output.txt");
         nFile.write(mas[infoAboutMas[2]-1][infoAboutMas[3]-1]+"");
         nFile.close();
     }
 
     private ArrayList<String> readFile(){
         ArrayList<String> strings = new ArrayList<>();
-
         try {
-            FileReader reader = new FileReader("D:\\Projects\\GPTest\\src\\Task557\\input.txt");
+            FileReader reader = new FileReader(System.getProperty("user.dir")+"/src/Task557/input.txt");
             Scanner scanner = new Scanner(reader);
             while(scanner.hasNextLine()) {
                 strings.add(scanner.nextLine());

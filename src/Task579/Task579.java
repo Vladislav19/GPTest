@@ -17,7 +17,7 @@ public class Task579 {
 
     public int[] parseDate(){
         WorkWithFile workWithFile = new WorkWithFile();
-        ArrayList<String> lines = workWithFile.readFile("D:\\Projects\\GPTest\\src\\Task579\\input.txt");
+        ArrayList<String> lines = workWithFile.readFile(System.getProperty("user.dir")+"/src/Task579/input.txt");
         int size = Integer.parseInt(lines.get(0));
         int[] arr = new int[size];
         String[] numb=lines.get(1).split(" ",size);

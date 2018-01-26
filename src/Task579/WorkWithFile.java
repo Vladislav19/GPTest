@@ -27,7 +27,7 @@ public class WorkWithFile {
     }
 
     public void  writeFile(ArrayList<Integer> indexes) throws IOException {
-        FileWriter nFile = new FileWriter("D:\\Projects\\GPTest\\src\\Task579\\output.txt");
+        FileWriter nFile = new FileWriter(System.getProperty("user.dir")+"/src/Task579/output.txt");
         nFile.write(indexes.size()+"\n");
         for(int i=0;i<indexes.size();i++){
             nFile.write(indexes.get(i)+1+" ");
